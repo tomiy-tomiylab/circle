@@ -31,9 +31,6 @@ class circle():
 
 circle = circle()
 
-x = np.array([])
-y = np.array([])
-r = np.array([])
 for a in np.linspace(1, 2, 100, endpoint=True):
     x = a
     y = a * 2
