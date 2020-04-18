@@ -11,7 +11,6 @@ class circle():
         self.fig.grid()
         self.x = np.array([])
         self.y = np.array([])
-         # 0から2paiの間の数を1000分割したものをiに
         for i in np.linspace(0, 2 * np.pi, 1000):
             self.x = np.append(self.x, math.cos(i))
             self.y = np.append(self.y, math.sin(i))
