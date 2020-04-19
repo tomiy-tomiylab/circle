@@ -9,9 +9,13 @@ class circle():
         self.ax, self.fig = self.circle_plt.subplots()
         self.fig.set_aspect('equal')
         self.fig.grid()
+        self.fig.set_xlim(-2, 8)
+        self.fig.set_ylim(-2, 8)
+        black = "#000000"
+        self.fig.hlines(y=0, xmin=-2, xmax=8, color=black)
+        self.fig.vlines(x=0, ymin=-2, ymax=8, color=black)
         self.x = np.array([])
         self.y = np.array([])
-         # 0から2paiの間の数を1000分割したものをiに
         for i in np.linspace(0, 2 * np.pi, 1000):
             self.x = np.append(self.x, math.cos(i))
             self.y = np.append(self.y, math.sin(i))
@@ -34,7 +38,7 @@ circle = circle()
 for a in np.linspace(1, 2, 100, endpoint=True):
     x = a
     y = a * 2
-    r = (5 * (a ** 2 + 2 * a + 2)) ** 0.5
+    r = (5 * (a ** 2 - 2 * a + 2)) ** 0.5
     circle.plot(x, y, r)
     circle.plot_center(x, y)
 
