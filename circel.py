@@ -23,7 +23,7 @@ class circle():
     def plot(self, cx, cy, r):
         x_plot = self.x * r + cx
         y_plot = self.y * r + cy
-        red = "#ff0000"
+        red = "#96ffbb"
         self.fig.plot(x_plot, y_plot, color=red)
 
     def plot_center(self, cx, cy):
